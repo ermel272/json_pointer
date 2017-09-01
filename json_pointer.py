@@ -84,8 +84,16 @@ class JsonPointer(object):
         :return: True if the JsonPointer's are equal, False otherwise.
         :rtype: bool
         """
-        # TODO: Potentially override hashing method if necessary
         return str(self) == str(other)
+
+    def __hash__(self):
+        """
+        JsonPointer hashing is equivalent to the hash of the string representation of the pointer.
+
+        :return: The hash value of the JsonPointer.
+        :rtype: int
+        """
+        return str(self).__hash__()
 
     def __str__(self):
         string = self.__EMPTY_STR
