@@ -1,5 +1,4 @@
-
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='json_pointer',
@@ -8,7 +7,7 @@ setup(
     version='0.0.0',
     description='An implementation of IETF RFC 6901',
     license='MIT',
-    url='www.github.com/ermel272/<repo>',   # TODO make github repository
+    url='github.com/ermel272/json-pointer',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
@@ -17,5 +16,7 @@ setup(
         'Programming Language :: Python :: 2.7'
     ],
     keywords='JSON pointer IETF RFC 6901',
-    install_requires=[]
+    install_requires=[],
+    packages=find_packages(),
+    include_package_data=True
 )

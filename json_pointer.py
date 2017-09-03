@@ -96,6 +96,10 @@ class JsonPointer(object):
         return str(self).__hash__()
 
     def __str__(self):
+        """
+        :return: A nice string representation of the JsonPointer.
+        :rtype: str
+        """
         string = self.__EMPTY_STR
         for piece in self.__pieces:
             string = "{}{}{}".format(string, self.__SLASH, piece)
@@ -139,11 +143,38 @@ class JsonPointer(object):
         return obj
 
     def move_pointer_forward(self, attribute):
-        assert isinstance(attribute, str), 'attribute parameter given not a string.'
-        self.__pieces.append(attribute)
+        """
+        Moves the pointer forward to a child attribute of the currently referenced object.
+
+        --- Example ---
+
+        >>> pointer = JsonPointer('/list')
+        >>> pointer.move_pointer_forward(0)
+        >>> assert str(pointer) == '/list/0'
+
+        :param attribute: The child attribute to move to.
+        :type attribute: str or int
+        """
+        assert isinstance(attribute, str) or isinstance(attribute, int), \
+            'attribute parameter given not a string or int.'
+
+        self.__pieces.append(str(attribute))
 
     def move_pointer_backward(self):
-        self.__pieces.pop()
+        """
+        Moves the pointer back to the currently referenced attribute's parent.
+
+        --- Example ---
+
+        >>> pointer = JsonPointer('/list/0')
+        >>> pointer.move_pointer_backward()
+        >>> assert str(pointer) == '/list'
+
+        :return: The name of the child attribute, or None if the JsonPointer is currently
+            pointing to the root of the object.
+        :rtype: str or None
+        """
+        return self.__pieces.pop() if len(self.__pieces) > 0 else None
 
     #########################
     #
@@ -204,6 +235,15 @@ class JsonPointer(object):
         return string.replace(self.__ESCAPED_SLASH, self.__SLASH).replace(self.__ESCAPED_TILDE, self.__TILDE)
 
     def __validate_pointer(self, pointer):
+        """
+        Validates the pointer string.
+
+        :param pointer: The string representation of the JsonPointer.
+        :type pointer: str
+
+        :raises JsonPointerException: If the pointer isn't a string, or if the pointer
+            does not begin with a slash character.
+        """
         if not isinstance(pointer, str):
             raise JsonPointerException('Pointer parameter "{}" given not a string,'.format(pointer))
 
