@@ -9,7 +9,7 @@ setup(
     license='MIT',
     url='github.com/ermel272/json-pointer',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: MIT License',
@@ -19,7 +19,8 @@ setup(
     install_requires=[],
     extras_require={
         'dev': [
-            'setuptools==36.2.7'
+            'setuptools==36.2.7',
+            'sphinx==1.6.3'
         ],
         'test': [
             'nose==1.3.7',

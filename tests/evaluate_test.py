@@ -4,13 +4,13 @@ import os
 from json_pointer import evaluate, JsonPointerException
 from tests import TEST_DIR
 
-TEST_FILE = os.path.join(TEST_DIR, 'test.json')
+JSON_FILE = os.path.join(TEST_DIR, 'test.json')
 
 
 class EvaluateTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        with open(TEST_FILE) as json_file:
+        with open(JSON_FILE) as json_file:
             cls.json = json.load(json_file)
 
     def test_evaluate_positives(self):
