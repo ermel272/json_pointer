@@ -17,6 +17,15 @@ setup(
     ],
     keywords='JSON pointer IETF RFC 6901',
     install_requires=[],
+    extras_require={
+        'dev': [
+            'setuptools==36.2.7'
+        ],
+        'test': [
+            'nose==1.3.7',
+            'coverage==4.4.1'
+        ]
+    },
     packages=find_packages(),
     include_package_data=True
 )
