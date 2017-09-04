@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
 
+# small diff
+
 setup(
     name='json_pointer',
     author='Chris Ermel',
