@@ -1,6 +1,6 @@
 import unittest
 
-from json_pointer import JsonPointer
+from json_pointer import JsonPointer, JsonPointerException
 
 
 class JsonPointerTest(unittest.TestCase):
@@ -27,3 +27,11 @@ class JsonPointerTest(unittest.TestCase):
         attr = self.pointer.move_pointer_backward()
         self.assertEqual(attr, None)
         self.assertEqual(str(self.pointer), '')
+
+    def test_equals(self):
+        self.assertTrue(self.pointer == JsonPointer('/foo/1'))
+        self.assertFalse(self.pointer == JsonPointer('/foo'))
+
+    def test_init_validation(self):
+        self.assertRaises(JsonPointerException, JsonPointer, 0)
+        self.assertRaises(JsonPointerException, JsonPointer, 'invalid')
