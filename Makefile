@@ -1,4 +1,4 @@
-MIN_COVER = 92
+MIN_COVER = 97
 
 install:
 	@pip install -e .
