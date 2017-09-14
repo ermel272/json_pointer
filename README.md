@@ -27,3 +27,5 @@ from the project root folder:
 cd docs
 make regen
 ```
+
+Finally, running `make run-tests` will execute all unit tests for the module.
