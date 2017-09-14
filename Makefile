@@ -1,15 +1,22 @@
 MIN_COVER = 98
 
+.PHONY: install install-dev install-test install-full run-tests \
+	init-git-submodules
+
+init-git-submodules:
+	@git submodule init && \
+	git submodule update
+
 install:
 	@pip install -e .
 
-install-dev:
+install-dev: init-git-submodules
 	@pip install -e .[dev]
 
 install-test:
 	@pip install -e .[test]
 
-install-full:
+install-full: init-git-submodules
 	@pip install -e .[dev,test]
 
 run-tests: install-test
