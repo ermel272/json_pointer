@@ -4,3 +4,5 @@
 .coverage
 /docs/_build/doctrees
 /docs/_build/html/_static
+build/
+dist/
