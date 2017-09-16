@@ -4,7 +4,7 @@ setup(
     name='json_ptr',
     author='Chris Ermel',
     author_email='ermel272@gmail.com',
-    version='0.0.0',
+    version='0.0.2',
     description='An implementation of IETF RFC 6901',
     license='MIT',
     url='https://github.com/ermel272/json-ptr.git',
