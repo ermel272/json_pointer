@@ -7,7 +7,7 @@ setup(
     version='0.0.0',
     description='An implementation of IETF RFC 6901',
     license='MIT',
-    url='https://github.com/ermel272/json-pointer.git',
+    url='https://github.com/ermel272/json-ptr.git',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

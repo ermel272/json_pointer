@@ -1,9 +1,4 @@
-.. json-pointer documentation master file, created by
-   sphinx-quickstart on Mon Sep  4 09:19:41 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-json-pointer docs
+json-ptr docs
 =================
 
 .. toctree::

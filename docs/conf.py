@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# json-pointer documentation build configuration file, created by
+# json-ptr documentation build configuration file, created by
 # sphinx-quickstart on Mon Sep  4 09:19:41 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'json-pointer'
+project = u'json-ptr'
 copyright = u'2017, Chris Ermel'
 author = u'Chris Ermel'
 
@@ -141,7 +141,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'json-pointer.tex', u'json-pointer Documentation',
+    (master_doc, 'json-ptr.tex', u'json-ptr Documentation',
      u'Chris Ermel', 'manual'),
 ]
 
@@ -150,7 +150,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'json-pointer', u'json-pointer Documentation',
+    (master_doc, 'json-ptr', u'json-ptr Documentation',
      [author], 1)
 ]
 
@@ -160,7 +160,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'json-pointer', u'json-pointer Documentation',
-     author, 'json-pointer', 'One line description of project.',
+    (master_doc, 'json-ptr', u'json-ptr Documentation',
+     author, 'json-ptr', 'One line description of project.',
      'Miscellaneous'),
 ]
