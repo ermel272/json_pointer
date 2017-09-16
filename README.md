@@ -13,8 +13,8 @@ pip install json-ptr
 ```
 
 ### Importing
-```
-from json_ptr import evaluate
+```pythonstub
+from json_pointer import evaluate, JsonPointer, JsonPointerException
 ```
 
 See the documentation linked above for examples.
