@@ -3,6 +3,6 @@
 /*.egg-info
 .coverage
 /docs/_build/doctrees
-/docs/_build/html/_static
+/docs/_build/html/*
 build/
 dist/
