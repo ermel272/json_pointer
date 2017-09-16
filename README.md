@@ -4,6 +4,21 @@ A Python 2.7 implementation of [IETF RFC 6901](https://tools.ietf.org/html/rfc69
 
 Please click [here](https://ermel272.github.io/json-pointer-docs/) to go to the docs.
 
+See the package hosted on [pypi](https://pypi.python.org/pypi/json_ptr).
+
+# Usage
+### Installation
+```
+pip install json-ptr
+```
+
+### Importing
+```
+from json_ptr import evaluate
+```
+
+See the documentation linked above for examples.
+
 # Contributing
 ### Getting the code
 

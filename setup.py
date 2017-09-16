@@ -1,10 +1,10 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='json_ptr',
     author='Chris Ermel',
     author_email='ermel272@gmail.com',
-    version='0.0.2',
+    version='0.0.3',
     description='An implementation of IETF RFC 6901',
     license='MIT',
     url='https://github.com/ermel272/json-ptr.git',
@@ -28,6 +28,6 @@ setup(
             'coveralls==1.2.0'
         ]
     },
-    packages=find_packages(),
+    packages=['json_ptr'],
     include_package_data=True
 )
