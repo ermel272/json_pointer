@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='json_pointer',
+    name='json_ptr',
     author='Chris Ermel',
     author_email='ermel272@gmail.com',
     version='0.0.0',
     description='An implementation of IETF RFC 6901',
     license='MIT',
-    url='github.com/ermel272/json-pointer',
+    url='https://github.com/ermel272/json-pointer.git',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

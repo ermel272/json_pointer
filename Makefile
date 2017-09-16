@@ -22,3 +22,6 @@ install-full: init-git-submodules
 run-tests: install-test
 	@nosetests --with-coverage --cover-inclusive --cover-erase \
 	--cover-tests --cover-min-percentage=$(MIN_COVER)
+
+release:
+	@python setup.py sdist upload -r pypi
